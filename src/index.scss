@@ -1,0 +1,110 @@
+$primary-color: #4caf50;
+$secondary-color: #f44336;
+$font-family: 'Arial, sans-serif';
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.app {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color, 10%;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    span {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+
+    .delete {
+      background-color: $secondary-color;
+
+      &:hover {
+        background-color: $secondary-color, 10%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+    width: 95%;
+  }
+
+  form {
+    input, button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+
+  ul li span {
+    font-size: 12px;
+  }
+}
